@@ -13,7 +13,7 @@ env:
   EXTRA_CMDS : "LD=ld.lld"
 
   KERNEL_SOURCE : "https://github.com/malkist01/mdo.git"
-  KERNEL_BRANCH : "noSU"
+  KERNEL_BRANCH : "NoSU"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
   CLANG_BRANCH : "lineage-20.0"
