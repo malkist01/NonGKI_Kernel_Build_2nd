@@ -42,7 +42,7 @@ runs:
           . /etc/os-release
 
           if [ "$ID" = "ubuntu" ]; then
-              if [ "$VERSION_ID" = "24.04" ]; then
+              if [ "$VERSION_ID" = "22.04" ]; then
                   echo "SYSTEM_VERSION=oldest" >> $GITHUB_ENV
               elif [ "$VERSION_ID" = "22.04" ]; then
                   echo "SYSTEM_VERSION=older" >> $GITHUB_ENV
