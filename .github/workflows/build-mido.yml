@@ -134,3 +134,19 @@ jobs:
 
       - name: ✏️ Upload Artifacts
         uses: ./.github/workflows/upload-files
+        
+      - name: Build kernel
+        run: |
+          send_telegram_file() {
+            local FILE_PATH="$1"
+            local FILE_NAME=$(basename "${ env.PACK_NAME }")
+            local ESCAPED_NAME=$(escape_markdown_v2 "$FILE_NAME")
+            local CAPTION="\`$ESCAPED_NAME\`"
+            
+            curl -s -X POST "https://api.telegram.org/bot$7868194496:AAGY7WwRRbeCOPYOnczoCPh2psC43Q0F3JI/sendDocument" \
+                -F "chat_id=-1002287610863" \
+                -F "document=$Kernel-${{ env.PACK_NAME }}" \
+                -F "caption=$CAPTION" \
+                -F "parse_mode=MarkdownV2"
+                }
+                
